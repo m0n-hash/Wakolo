@@ -4,6 +4,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class main {
+    public static void main(String[] args){
+        try{
+            runProgram();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+    }
     static void runProgram() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -39,43 +46,6 @@ public class main {
             runProgram();
         }
     }
-    static void askUser() throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
-        System.out.println("Enter Number 1");
-        int num1=Integer.parseInt(br.readLine());
-        System.out.println("Enter Number 2");
-        int num2=Integer.parseInt(br.readLine());
-        System.out.println("Enter Operator");
-        String operator=br.readLine();
-
-    }
-    public static void main(String[] args){
-        try{
-            runProgram();
-        }catch(Exception ex){
-            System.out.println(ex.getMessage());
-        }
-    }
-
-    static void loopTriangle(int num){
-        for(int i=0;i<num;i++){
-            //Star print loop
-            for(int j=0;j<i+1;j++){
-                System.out.print("*");
-            }
-            System.out.println();
-        }
-    }
-    static void loopTriangle2(int num){
-        for(int i=0;i<num;i++){
-            //Star print loop
-            for(int j=0;j<num-i;j++){
-                System.out.print("*");
-            }
-            System.out.println();
-        }
-    }
 
     static void calculate() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -105,6 +75,26 @@ public class main {
                 break;
         }
     }
+    static void loopTriangle(int num){
+        for(int i=0;i<num;i++){
+            //Star print loop
+            for(int j=0;j<i+1;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+    static void loopTriangle2(int num){
+        for(int i=0;i<num;i++){
+            //Star print loop
+            for(int j=0;j<num-i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+
 }
 
 /*Identifier
