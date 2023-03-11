@@ -1,10 +1,21 @@
+import util.MyMath;
+import util.Phone;
+import util.Samsung;
+import util.Util;
+
 import java.io.BufferedReader;
-import java.io.Console;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class main {
     public static void main(String[] args){
+        Samsung s=new Samsung();
+        s.setImeiNo("123");
+        s.setBrandName("SAMSUNG");
+        s.setModelNo("S08");
+
+        String test="Result("+"World"+1;
+
         try{
             runProgram();
         }catch(Exception ex){
@@ -58,22 +69,11 @@ public class main {
         System.out.print("Enter operator : ");
         String operator=br.readLine();
 
-//        String resultFormat="Result (%d %s %d) => %s";
-
-        switch(operator){
-            case "+":
-                System.out.println("Result ("+num1 +operator+num2+") => "+(num1+num2));
-                break;
-            case "-":
-                System.out.println(num1-num2);
-                break;
-            case "*":
-                System.out.println(num1*num2);
-                break;
-            default:
-                System.out.println(num1/num2);
-                break;
-        }
+        MyMath m=new MyMath();
+        m.setNum1(num1);
+        m.setNum2(num2);
+        m.setOperator(operator);
+        m.calculate();
     }
     static void loopTriangle(int num){
         for(int i=0;i<num;i++){
