@@ -1,18 +1,39 @@
-import util.MyMath;
-import util.Phone;
-import util.Samsung;
-import util.Util;
+import util.*;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.security.interfaces.RSAMultiPrimePrivateCrtKey;
+import java.util.Objects;
 
 public class main {
-    public static void main(String[] args){
-        Samsung s=new Samsung();
-        s.setImeiNo("123");
-        s.setBrandName("SAMSUNG");
-        s.setModelNo("S08");
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        Object obj=null;
+        System.out.println("Please chooose phone, samsung(s) or Xiaomi(x)");
+        String readResult=br.readLine();
+
+        if(Objects.equals(readResult, "s")){
+            obj=new Samsung();
+        }else{
+            obj=new Xiaomei();
+        }
+
+
+        ((Phone)obj).sendMessage();
+
+        String test123="";
+
+
+//        ((TestPhone)s).sendMessage();
+
+//        Samsung s=new Samsung();
+//        s.getImeiNo();
+//        s.getSamsungAccount();
+//
+//        s.setImeiNo("123");
+//        s.setBrandName("SAMSUNG");
+//        s.setModelNo("S08");
 
         String test="Result("+"World"+1;
 
